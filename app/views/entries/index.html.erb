@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Entries</h1>
+
+<div class="entries">
+  <% @entries.each do |entry| %>
+    <div class="entry">
+      <p><%= image_tag entry.photo_url %></p>
+      <p><%= link_to entry.author, entry %></p>
+      <p><%= entry.date_taken %></p>
+      <p>
+        <%= link_to 'Edit', edit_entry_path(entry) %> | <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+
+<br>
+
+<%= link_to 'New Entry', new_entry_path %>
