@@ -1,0 +1,16 @@
+<h1>New Entry</h1>
+
+<!-- Router - request from browser -->
+<!-- router goes to the appropriate controller to look for new action -->
+<!-- create a new form in an entry -->
+<!-- use clown hats on forms -->
+
+
+<%= form_for :entry do |f| %>
+<p>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <%= f.photo_url :author %>
+  <%= f.date_take :author %>
+</p>
+<% end %>
